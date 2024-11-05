@@ -1,0 +1,456 @@
+/* General page styles */
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #ffffff;
+}
+
+.Title-page {
+  max-width: 1000px;
+  margin: auto;
+  background-color: #e9e9e9;
+  border: 1px solid #000000;
+}
+
+.Title-page h1 {
+  font-size:6em;
+}
+
+.Title-page h2 {
+  font-size: 2em;
+}
+
+.text-content {
+  padding-top: 1.5%;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 4%;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none; /* Remove bullet points */
+  display: flex; /* Flexbox for horizontal layout */
+  gap: 50px; /* Default space between nav items */
+  justify-content: center;
+  padding-right: 2%;
+}
+
+nav ul li {
+  display: inline; /* Inline display for list items */
+}
+
+nav ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #000000; /* Color for links */
+}
+
+.logo-img {
+  max-width: 200px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.news-content {
+  columns: 3; /* Creates 3 columns like a newspaper */
+  column-gap: 20px; /* Adds space between columns */
+  padding: 0px;
+  background-color: #e9e9e9;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+h1, h2 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  margin: 0%;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0%;
+  break-inside: avoid; /* Prevents heading from breaking across columns */
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.image-container {
+  display: flex;
+}
+
+.large-image img {
+  width: 450px; /* Adjust the size of the large image */
+  height: 500px; /* Full height */
+  object-fit: cover;
+}
+
+.small-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Creates 2 columns */
+  grid-template-rows: 1fr 1fr; /* Creates 2 rows */
+  gap: 0; /* Ensures no space between images */
+}
+
+.small-images img {
+  width: 275px;
+  height: 248px;
+  object-fit: cover
+}
+
+.author-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.author-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.author-image {
+  flex: 0 0 200px;
+}
+
+.author-image img {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+footer {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  text-align: center; /* Center text */
+  border-top: 1px solid #000;
+  background-color: #14181d;
+  color: #e9e9e9;
+}
+
+/* Small Mobile */
+@media (max-width: 540px) {
+  body {
+      padding: 0%; /* Smaller padding for small mobile */
+      margin: 0%;
+  }
+
+  nav ul {
+    list-style-type: none; /* Remove bullet points */
+    display: flex; /* Flexbox for horizontal layout */
+    gap: 60px; /* Default space between nav items */
+    justify-content: center;
+    padding-right: 0%;
+    padding-left: 1%;
+
+  }
+ 
+  nav ul li {
+      display: inline; /* Inline display for list items */
+      font-size: 1em;
+    }
+    
+  nav ul li a {
+      text-decoration: none; /* Remove underline from links */
+    }
+
+  .Title-page {
+      max-width: 1000px;
+  }
+
+  .text-content h1 {
+      text-align: center;
+      justify-content: center;
+      font-size: 2.5em;
+  }
+
+  .text-content h2 {
+      text-align: center;
+      justify-content: center;
+      font-size: 2.5em;
+  }
+
+  .logo-img {
+      max-width: 80px;
+      padding-bottom: 0%;
+  }
+
+  .news-content {
+      columns: 1; /* Single column layout on small mobile */
+      column-gap: 12px; /* Reduce gap between columns */
+  }
+
+  .large-image img:nth-child(1) {
+    display: none; /* Change nth-child number to hide a different image */
+  }
+
+  .small-images {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column for the small images */
+  }
+
+  .small-images img{
+    width: 100%;
+    height: auto;
+  }
+
+  .image-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    }
+
+    .author-section {
+      flex-direction: column; /* Stacks items vertically */
+      align-items: center;
+      text-align: center; /* Centers text content */
+  }
+
+  .author-image {
+      order: -1; /* Places image at the top */
+      margin-bottom: 20px; /* Adds space below the image */
+  }
+
+  footer {
+      padding: 12px;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 720px) {
+  body {
+      padding: 20px; /* Larger padding for large mobile */
+  }
+
+  header nav ul {
+      gap: 50px; /* Increase gap between nav items */
+  }
+
+  .Title-page {
+      max-width: 90%;
+      margin: 0%;
+      padding: 4%;
+  }
+
+  .text-content h1 {
+    text-align: center;
+    justify-content: center;
+    font-size: 2.5em;
+}
+
+  .text-content h2 {
+    text-align: center;
+    justify-content: center;
+    font-size: 2.5em;
+}
+
+  .text-content {
+    padding: 4%;
+}
+
+  .news-content {
+      columns: 1; /* 1-column layout on large mobile */
+      column-gap: 20px;
+  }
+
+
+  .small-images {
+      display: grid;
+      grid-template-columns: 1fr; /* 1 columns on large mobile */
+      gap: 0px;
+  }
+
+  .small-images img {
+      width: 100%;
+      height: auto;
+  }
+
+  /* Hide the first image in the small images section for tablet view */
+  .large-image img:nth-child(1) {
+    display: none; /* Change nth-child number to hide a different image */
+  }
+
+  .author-section {
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center;
+    text-align: center; /* Centers text content */
+}
+
+.author-image {
+    order: -1; /* Places image at the top */
+    margin-bottom: 20px; /* Adds space below the image */
+}
+  footer {
+      padding: 20px;
+  }
+}
+
+/* Tablet (720px-1024px) */
+@media (min-width: 720px) and (max-width: 1024px) {
+
+  /* Navigation Styling */
+  nav ul {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    padding: 0%;
+    margin: 0%;
+  }
+
+  /* Main Title Section */
+  .text-content {
+    text-align: center;
+    padding: 4%;
+  }
+
+  .text-content h1, .text-content h2 {
+    font-size: 2.5em;
+  }
+
+  /* Article Content */
+  .news-content {
+    columns: 1; /* Keep news content in a single column */
+    padding: 0%;
+  }
+
+  /* Image Section (Album Covers) */
+  .image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+    gap: 0px;
+    padding: 0%;
+    margin: 0%;
+    justify-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .large-image {
+    display: contents; /* Allow direct child styling for grid */
+    padding: 0%; /* Remove any padding */
+    margin: 0%; /* Ensure no margin */
+  }
+
+  .large-image img {
+    width: 100%; /* Set width to 100% for responsive fit */
+    height: auto;
+    object-fit: cover;
+    margin: 0%; /* Ensure no margin */
+    padding: 0%; /* Ensure no padding */
+  }
+
+  .small-images {
+    display: contents; /* Allow direct child styling for grid */
+    padding: 0%; /* Remove any padding */
+    margin: 0%; /* Remove any margin */
+  }
+
+  .small-images img {
+    width: 100%; /* Set width to 100% for responsive fit */
+    height: auto;
+    object-fit: cover;
+    margin: 0%; /* Ensure no margin */
+    padding: 0%; /* Ensure no padding */
+  }
+
+  /* Hide the first image in the small images section for tablet view */
+  .small-images img:nth-child(4) {
+    display: none; /* Change nth-child number to hide a different image */
+  }
+
+  .author-section {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.author-text h2 {
+    font-size: 2rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.author-image {
+    order: 10; /* This places the image before the text */
+    flex: 0 0 200px;
+    margin-right: 20px;
+}
+
+.author-text {
+    flex: 1;
+    padding: 10px;
+}
+
+ 
+  /* Footer Styling */
+  footer {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    border-top: 1px solid #000;
+  }
+}
+
+
+
+
+/* Desktop (1024px and above) */
+@media (min-width: 1024px) {
+  nav ul {
+    gap: 280px; /* Default gap */
+  }
+
+  .news-content {
+    columns: 3; /* Three columns for desktop */
+  }
+
+  .Title-page {
+    max-width: 1000px;
+  }
+
+  .image-container {
+    flex-direction: row; /* Side-by-side images */
+  }
+
+  .small-images {
+    grid-template-columns: 1fr 1fr; /* Two columns for small images */
+  }
+
+  .author-section {
+    max-width: 1200px; /* Allows more space for larger screens */
+    padding: 40px;
+}
+
+.author-text h2 {
+    font-size: 2.5rem; /* Increase font size for large screens */
+    justify-content: center;
+    text-align: center;
+}
+
+.author-text p {
+    font-size: 1rem; /* Slightly larger text for readability */
+    margin-left: 10%;
+}
+
+.author-image {
+    flex: 0 0 200px; /* Increase image size for larger screens */
+    margin-right: 10%;
+}
+
+.author-image img {
+    max-width: 200px;
+}
+
+  footer {
+    padding: 30px 0; /* Larger footer padding */
+  }
+}
+
