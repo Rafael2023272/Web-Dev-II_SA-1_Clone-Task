@@ -1,0 +1,677 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Navigation bar styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #231651; /* Blue background */
+    padding: 20px 10px;
+    box-shadow: 0 10px 0px 0px black; /* Solid black shadow only at the bottom */
+    margin-bottom: 48px;
+}
+
+/* Adjusted menu styling */
+.navbar-menu {
+    margin-left: auto; /* Adjust this value to control spacing from the logo */
+}
+
+.navbar-menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Spacing between each nav item */
+.navbar-menu ul li {
+    margin-right: 16px; /* Increase or decrease as needed */
+}
+
+.navbar-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: lato;
+}
+
+/* Logo styling */
+.navbar-logo {
+    color: #ffffff;
+    font-size: 3em;
+    text-decoration: none;
+    font-family: teko;
+}
+
+/* Search button styling */
+.navbar-search {
+    background-color: #000000;
+    color: #fff;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 3em;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: teko;
+}
+
+.Container{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+ /* Card styling */
+.card {
+    width: 100%;
+    height: auto;
+    background-color: #070410;
+    color: #fff;
+    box-shadow: 10px 10px 0px 0px #4DCCBD;
+    margin: 16px auto; /* Center the card */
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+}
+
+/* Image styling */
+.card-image1 {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image fills its container */
+}
+
+/* Content styling */
+.card-content {
+    padding: 16px;
+    margin: 0px;
+}
+
+.card-content h1{
+    padding: 0px;
+    margin: 0%;
+    font-family: teko;
+    font-size: 3em;
+}
+
+.text-button-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0px;
+    margin: 0%;
+    padding: 0%;
+}
+
+.card-text {
+    font-size: 1.5em;
+    margin-right: 16px;
+    padding: 0px;
+    font-family: lato;
+}
+
+.watch-button {
+    background-color: #231651; /* Dark purple background */
+    color: #4DCCBD; /* Light teal text */
+    padding: 10px;
+    font-size: 2rem;
+    width: 90%;
+    height: 80px;
+    border-radius: 10px;
+    border: 3px solid white;
+    font-family: teko;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 16px;
+}
+
+/* Card styling (shared for both cards) */
+
+.card2, .card3 {
+    width: 100%;
+    height: auto; /* Set the same height for both cards */
+    background-color: #070410;
+    color: #fff;
+    box-shadow: 10px 10px 0px 0px #4DCCBD;
+    text-align: center;
+    margin: 16px auto;
+}
+/* Image styling for card2 */
+.card-image2 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Heading styling for card2 */
+.card2 h1 {
+    font-family: teko;
+    font-size: 3em;
+    text-align: left;
+    margin: 5px 5px 0px 16px;
+}
+
+/* Content styling for card2 */
+.card-content2 {
+    padding: 16px;
+}
+
+.card-content2 p {
+    font-size: 1.5em;
+    text-align: left;
+    margin-top: 0;
+    padding-bottom: 16px;
+    font-family: lato;
+}
+
+/* Button styling for card2 */
+.watch-button2 {
+    background-color: #231651; /* Dark purple background */
+    color: #4DCCBD; /* Light teal text */
+    padding: 10px;
+    font-size: 2rem;
+    width: 90%;
+    height: 80px;
+    border-radius: 10px;
+    border: 3px solid white;
+    font-family: teko;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 16px;
+}
+
+/* Styling for card3 */
+
+/* Image styling for card3 */
+.card-image3 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Heading styling for card3 */
+.card3 h1 {
+    font-family: teko;
+    font-size: 3em;
+    text-align: left;
+    margin: 5px 5px 0px 16px;
+}
+
+/* Content styling for card3 */
+.card-content3 {
+    padding: 16px;
+}
+
+.card-content3 p {
+    font-size: 1.5em;
+    text-align: left;
+    margin-top: 0;
+    padding-bottom: 16px;
+    font-family: lato;
+}
+
+/* Button styling for card3 */
+.watch-button3 {
+    background-color: #231651; /* Dark purple background */
+    color: #4DCCBD; /* Light teal text */
+    padding: 10px;
+    font-size: 2rem;
+    width: 90%;
+    height: 80px;
+    border-radius: 10px;
+    border: 3px solid white;
+    font-family: teko;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Card styling */
+.card4, .card5, .card6 { 
+    width: 100%;
+    height: auto;
+    background-color: #070410;
+    color: #fff;
+    box-shadow: 10px 10px 0px 0px #4DCCBD;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 16px;
+    display: flex; /* Allows side-by-side layout for image and content */
+}
+
+/* Image styling */
+.card-image4, .card-image5, .card-image6 {
+    width: 100%; /* Takes 50% of the card's width */
+    height: auto; /* Matches the height of the container */
+    object-fit: cover; /* Fills the space without distortion */
+}
+
+/* Content styling */
+.card-content4, .card-content5, .card-content6 {
+    padding: 16px;
+}
+
+.card-content4 h1{
+    font-family: teko;
+    font-size: 3em;
+    text-align: left;
+    margin: 5px 5px 0px 0px;
+}
+
+.card-content4 p {
+    font-size: 1.5em;
+    text-align: left;
+    margin-bottom: 16px;
+    padding: 0px; /* Removes extra margin */
+    font-family: lato;
+}
+
+/* Button styling */
+.watch-button4, .watch-button5, .watch-button6 {
+    background-color: #231651; /* Dark purple background */
+    color: #4DCCBD; /* Light teal text */
+    font-size: 2rem;
+    padding: 16px;
+    border-radius: 10px;
+    border: 3px solid white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: auto;
+    margin: auto;
+    width: 100%;
+    height: 80px;
+    font-family: teko;
+}
+
+.card-content5 h1{
+    font-size: 3em;
+    font-family: teko;
+    margin: 0%;
+    padding: 0%;
+}
+
+.card-content5 p {
+    font-size: 1.5em;
+    text-align: left;
+    margin: 0px;
+    padding: 0px; /* Removes extra margin */
+    font-family: lato;
+}
+
+.card-content6 h1{
+    font-size: 3em;
+    font-family: teko;
+    margin: 0% ;
+    padding: 0%;
+}
+
+.card-content6 p {
+    font-size: 1.5em;
+    text-align: left;
+    margin-bottom: 20px;
+    font-family: lato;
+}
+
+
+@media screen and (min-width: 1024px) {
+    body {
+        margin-bottom: 48px;
+    }
+
+    /* Place any styles you want to apply specifically for screens 1024px and above */
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #231651;
+        padding: 20px 10px;
+        box-shadow: 0 10px 0px 0px black;
+        margin-bottom: 48px;
+    }
+
+    .navbar-menu {
+        margin-left: 100px;
+    }
+
+    .navbar-menu ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar-menu ul li {
+        margin-right: 80px;
+    }
+
+    .navbar-menu ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.5em;
+        font-family: lato;
+    }
+
+    .navbar-logo {
+        color: #ffffff;
+        font-size: 3em;
+        text-decoration: none;
+        font-family: teko;
+    }
+
+    .navbar-search {
+        background-color: #000000;
+        color: #fff;
+        border: 2px solid white;
+        padding: 10px 20px;
+        font-size: 3em;
+        cursor: pointer;
+        border-radius: 5px;
+        font-family: teko;
+    }
+
+    .watch-button {
+        width: 100%; /* Takes up 40% of the row */
+        height: 200px;
+        background-color: #231651; /* Dark purple background */
+        color: #4DCCBD; /* Light teal text */
+        border-radius: 15px;
+        font-size: 3rem;
+        padding: 0px;
+        margin-bottom: 16px;
+        border: 3px solid white;
+        text-align: center;
+        line-height: 1; /* Adjust line-height for "WATCH" and "NOW" */
+        font-family: teko;
+    }
+    .Container{
+        width: 900px;
+        display: flex;
+        flex-direction: column; /* Ensure the other cards are stacked vertically */
+        flex-wrap: wrap;
+    }
+    
+
+    .card2{
+        width: 440px;
+        height: 900px; /* Set the same height for both cards */
+        margin-left: 0;
+        margin-bottom: 16px;
+    }
+    .card3{
+        width: 440px;
+        height: 900px; /* Set the same height for both cards */
+        margin-top: -102%;
+        margin-left: 51%;
+        margin-bottom: 16px;
+    }
+
+    .card4, .card5, .card6 { 
+        width: 900px;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-bottom: 16px;
+        padding: auto;
+        display: flex; /* Allows side-by-side layout for image and content */
+    }
+    .card-image6, .card-image5, .card-image4 {
+        width: 50%; /* Takes 50% of the card's width */
+        height: auto; /* Matches the height of the container */
+        object-fit: cover; /* Fills the space without distortion */
+    }
+
+    .card-image1{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+    .card-content4 h1{
+        font-size: 3em;
+        font-family: teko;
+        text-align: left;
+        margin-bottom: 48px;
+        padding: 0%;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 720px) {
+    
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-logo {
+        font-size: 3rem; /* Slightly smaller logo on mobile */
+        margin: auto;
+    }
+
+    .navbar-menu {
+        display: none; /* Hide the menu items */
+    }
+
+    /* Search Button Styling for Mobile */
+    .navbar-search {
+        width: 40%; /* Make the search button smaller on mobile */
+        font-size: 2em; /* Adjust font size for mobile */
+        margin: auto;
+    }
+    .Container {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        display: flex;
+        columns: 1;
+        justify-content: center;
+        margin-bottom: 16px;
+        width: 100%;
+    }
+
+    .text-button-row {
+        flex-direction: column; /* Stacks the text and button vertically */
+        align-items: flex-start; /* Aligns items to the start */
+    }
+
+    .watch-button br {
+        display: none; /* Hides the <br> tag on smaller screens */
+    }
+
+    .card-text {
+        margin-bottom: 16px; /* Adds space between text and button */
+    }
+
+    .card, .card2, .card3, .card4, .card5, .card6 {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Auto adjust height for mobile */
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 16px auto;
+        padding: 16px auto;
+        box-shadow: none;
+        gap: 16px;
+    }
+
+    .card-content .card-content2 .card-content3 .card-content4 p {
+        font-size: 1.5em; /* Smaller text for mobile */
+        padding: 16px;
+        margin: 0%;
+        margin-bottom: 0%;
+        font-family: lato;
+    }
+
+    .card-content5 p{
+        padding: 0%;
+        margin-bottom: 48px;
+        font-size: 1.5em;
+        font-family: lato;
+    }
+
+    .card-content6 p{
+        padding: 0%;
+        margin-bottom: 48px;
+        font-size: 1.5em;
+        font-family: lato;
+    }
+   
+    .watch-button, .watch-button2, .watch-button3, .watch-button4 {
+        font-size: 2em; /* Adjust button size for mobile */
+        width: 90%; /* Button takes less space on smaller screens */
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin: 16px auto;
+        display: flex;
+    }
+
+    .watch-button5, .watch-button6{
+        font-size: 2em; /* Adjust button size for mobile */
+        width: 90%; /* Button takes less space on smaller screens */
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: auto;
+        margin: 16px auto;
+        display: flex;
+    }
+
+    /* Reduce card image height for mobile */
+    .card-image, .card-image2, .card-image3, .card-image4, .card-image5, .card-image6 {
+        width: 100%;
+        height: auto; /* Smaller image height for mobile */
+    }
+
+    /* Adjust heading size for mobile */
+    .card h1, .card4 h1, .card5 h1, .card6 h1 {
+        font-size: 2em; /* Adjust heading size for mobile */
+        margin-top: 16px auto;
+        padding: 0%;
+    }
+
+    .card2 h1, .card3 h1 {
+        font-size: 2em; /* Adjust heading size for mobile */
+        margin-top: 16px auto;
+        padding: 0%;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-logo {
+        font-size: 2.5rem; /* Slightly larger logo for tablet */
+        margin: 0 16px; /* Small spacing around the logo */
+    }
+
+    .navbar-menu li {
+        display: flex;
+    }
+
+    .navbar-menu a {
+        font-size: 1.5rem; /* Adjust font size for better readability */
+        padding: 0px; /* Small spacing for clickable areas */
+        color: #fff;
+        text-decoration: none;
+        gap: 16px;
+    }
+
+    .navbar-search {
+        width: 20%; /* Adjust width for better layout */
+        height: 10%;
+        font-size: 2em; /* Slightly smaller font size for balance */
+        margin: auto; /* Small spacing */
+        padding: auto;
+    }
+    .Container{
+        max-width: 900px;
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr;   
+        margin: 48px auto;
+        gap: 48px;
+    }
+
+    .card, .card2, .card3, .card4, .card5, .card6 {
+        width: 100%; 
+        height: 1000px; /* Auto adjust height for tablet */
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    .card-image1, .card-image2, .card-image3, .card-image4, .card-image5, .card-image6 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .watch-button br {
+        display: none; /* Hides the <br> tag on smaller screens */
+    }
+
+    .text-button-row {
+        flex-direction: column; /* Stacks the text and button vertically */
+    }
+    .watch-button, .watch-button2, .watch-button3, .watch-button4 {
+        font-size: 2em; /* Adjust button size for mobile */
+        width: 90%; /* Button takes less space on smaller screens */
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        display: flex;
+    }
+
+    .watch-button5, .watch-button6{
+        font-size: 2em; /* Adjust button size for mobile */
+        width: 90%; /* Button takes less space on smaller screens */
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: auto;
+        margin: auto;
+        display: flex;
+    }
+
+    .card-content4 h1{
+        font-size: 3em;
+        font-family: teko;
+        margin-bottom: 48px;
+        padding-bottom: 0px;
+        margin-top: 0%;
+    }
+    
+    .card-content4 p {
+        font-size: 1.5em;
+        text-align: left;
+        margin-bottom: 48px;
+        margin-top: 16px;
+        padding: 0px; /* Removes extra margin */
+        font-family: lato;
+    }
+    
+}
+
+
+    
