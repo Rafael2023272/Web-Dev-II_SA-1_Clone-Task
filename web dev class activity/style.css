@@ -1,0 +1,14 @@
+       body {
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding-top: 20%;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: large;
+        }
+
+        @media (max-width: 500px) 
+        {
+       body {
+        background-color: rgb(67, 237, 5);
+        }
+        }

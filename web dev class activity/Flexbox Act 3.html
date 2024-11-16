@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light background color */
+            }
+
+        .gallery-container {
+            display: flex; /* Use flexbox for the gallery */
+            flex-wrap: wrap; /* Allow images to wrap to the next line */
+            justify-content: center; /* Center the images */
+            max-width: 1200px; /* Max width of the gallery */
+            margin: 20px auto; /* Center the gallery with margin */
+            padding: 10px; /* Padding around the gallery */
+            }
+
+        .gallery-image {
+            flex: 1 1 300px; /* Flexible images with a base width of 300px */
+            margin: 10px; /* Space between images */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            transition: transform 0.3s; /* Transition for scaling effect */
+            }
+
+        /* Scale effect on hover */
+        .gallery-image:hover {
+            transform: scale(1.05); /* Slightly enlarge image on hover */
+            }
+
+</style>
+<body>
+    <div class="gallery-container">
+        <img src="https://picsum.photos/id/1029/300/200" alt="Image 1" class="gallery-image">
+        <img src="https://picsum.photos/id/1028/300/200" alt="Image 2" class="gallery-image">
+        <img src="https://picsum.photos/id/1021/300/200" alt="Image 3" class="gallery-image">
+        <img src="https://picsum.photos/id/1022/300/200" alt="Image 4" class="gallery-image">
+        <img src="https://picsum.photos/id/1024/300/200" alt="Image 5" class="gallery-image">
+        <img src="https://picsum.photos/id/1027/300/200" alt="Image 6" class="gallery-image">
+        <img src="https://picsum.photos/id/1023/300/200" alt="Image 7" class="gallery-image">
+        <img src="https://picsum.photos/id/1025/300/200" alt="Image 8" class="gallery-image">
+        <img src="https://picsum.photos/id/1020/300/200" alt="Image 9" class="gallery-image">
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light background color */
+            }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr; /* One column on mobile */
+            grid-template-rows: auto; /* Rows adjust based on content */
+            max-width: 800px; /* Maximum width for the layout */
+            margin: 20px auto; /* Center the layout */
+            padding: 20px; /* Padding around the layout */
+            background-color: white; /* Background color of the product section */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            }
+
+        /* Styling for product image */
+            .product-image img {
+            padding-top: 12px;
+            width: 100%; /* Responsive width */
+            height: 90%; /* Maintain aspect ratio */
+            border-radius: 0 10px 10px 0 ; /* Rounded corners on top */
+            }
+
+        /* Styling for product details */
+            .product-details {
+            padding: 20px; /* Padding inside details section */
+            }
+
+        .product-title {
+            font-size: 24px; /* Title font size */
+            margin: 0; /* Remove default margin */
+            }
+
+        .product-price {
+            font-size: 20px; /* Price font size */
+            color: #4CAF50; /* Green color for price */
+            margin: 10px 0; /* Space around price */
+            }
+
+        .product-description {
+            font-size: 16px; /* Description font size */
+            line-height: 1.5; /* Spacing between lines */
+            }
+
+        .buy-button {
+            background-color: #4CAF50; /* Button background color */
+            color: white; /* Button text color */
+            border: none; /* Remove border */
+            padding: 10px 15px; /* Padding inside button */
+            font-size: 16px; /* Button font size */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer on hover */
+            margin-top: 10px; /* Space above button */
+            }
+
+        /* Button hover effect */
+            .buy-button:hover {
+            background-color: #1b4f1e; /* Darker green on hover */
+            }
+
+        /* Media queries for responsiveness */
+        @media (min-width: 600px) {
+            .product-container {
+            grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+            gap: 20px; /* Space between columns */
+            }
+
+        .product-image {
+            grid-column: 1; /* Image in first column */
+            }
+
+        .product-details {
+            grid-column: 2; /* Details in second column */
+            }
+            }
+
+</style>
+<body>
+    <div class="product-container">
+        <div class="product-image">
+            <img src="https://helios-i.mashable.com/imagery/articles/05vjuq9JPoajn7319Fp37Tr/images-2.fill.size_2000x1125.v1694814496.png" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">APPLE Iphone 15</h1>
+            <p class="product-price">$799</p>
+            <p class="product-description">
+                The iPhone 15 and iPhone 15 Plus are smartphones developed and marketed by Apple Inc. They are the eighteenth-generation iPhones, 
+                succeeding the iPhone 15 and iPhone 15 Plus.
+            </p>
+            <button class="buy-button">Add to Cart</button>
+        </div>
+    </div>
+</body>
+</html>

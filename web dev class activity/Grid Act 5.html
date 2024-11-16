@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light background color */
+            }
+
+        .quiz-container {
+            display: grid;
+            grid-template-rows: auto 1fr; /* Question area is auto-sized, answers take up the rest */
+            grid-template-columns: 1fr; /* One column layout */
+            max-width: 600px; /* Max width for the layout */
+            margin: 20px auto; /* Center the layout */
+            padding: 20px; /* Padding around the layout */
+            background-color: white; /* Background color for quiz container */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            }
+
+        .question {
+            margin-bottom: 20px; /* Space below the question */
+            }
+
+        .answers {
+            display: grid; /* Use grid for answer options */
+            grid-template-columns: repeat(2, 1fr); /* Two columns for answers */
+            gap: 15px; /* Space between answer choices */
+            }
+
+        .answer {
+            background-color: #4CAF50; /* Background color for answer options */
+            color: white; /* Text color */
+            padding: 15px; /* Padding inside answer options */
+            text-align: center; /* Center text */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer on hover */
+            transition: background-color 0.3s; /* Transition for hover effect */
+            }
+
+        /* Hover effect for answer options */
+            .answer:hover {
+            background-color: #124715; /* Darker green on hover */
+            }
+
+</style>
+<body>
+    <div class="quiz-container">
+        <div class="question">
+            <h2>What is the capital of Philippines?</h2>
+        </div>
+        <div class="answers">
+            <div class="answer">A) Seoul</div>
+            <div class="answer">B) Tokyo</div>
+            <div class="answer">C) Manila</div>
+            <div class="answer">D) Bali</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Layout</title>
+  <style>
+
+    body {
+      font-family: Arial Narrow, sans-serif;
+      background-color: #c7c7c7;
+      padding: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .question-container {
+      margin-bottom: 20px;
+    }
+
+    .question {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .answers {
+      display: flex;
+      gap: 20px;
+      justify-content: space-around;
+    }
+
+    label {
+      font-size: 16px;
+      color: #555;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #343535;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #8c4136;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quiz-container">
+    <h1>Quiz 101</h1>
+
+    <div class="question-container">
+      <div class="question">1. What is the square root of 49?</div>
+      <div class="answers">
+        <label>
+          <input type="radio" name="q1" value="A">
+          A. 78
+        </label>
+        <label>
+          <input type="radio" name="q1" value="B">
+          B. 9
+        </label>
+        <label>
+          <input type="radio" name="q1" value="C">
+          C. 7
+        </label>
+        <label>
+          <input type="radio" name="q1" value="D">
+          D. 88
+        </label>
+      </div>
+    </div>
+
+    <div class="question-container">
+      <div class="question">2. In which continent USA is located?</div>
+      <div class="answers">
+        <label>
+          <input type="radio" name="q2" value="A">
+          A. Europe
+        </label>
+        <label>
+          <input type="radio" name="q2" value="B">
+          B. Asia
+        </label>
+        <label>
+          <input type="radio" name="q2" value="C">
+          C. Australia
+        </label>
+        <label>
+          <input type="radio" name="q2" value="D">
+          D. North America
+        </label>
+      </div>
+    </div>
+
+    <div class="question-container">
+        <div class="question">3. What is the biggest country by land area?</div>
+        <div class="answers">
+          <label>
+            <input type="radio" name="q2" value="A">
+            A. Philippines
+          </label>
+          <label>
+            <input type="radio" name="q2" value="B">
+            B. China
+          </label>
+          <label>
+            <input type="radio" name="q2" value="C">
+            C. Russia
+          </label>
+          <label>
+            <input type="radio" name="q2" value="D">
+            D. Canada
+          </label>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question">4. How many Emirates in the United Arab Emirates?</div>
+        <div class="answers">
+          <label>
+            <input type="radio" name="q2" value="A">
+            A. 7
+          </label>
+          <label>
+            <input type="radio" name="q2" value="B">
+            B. 9
+          </label>
+          <label>
+            <input type="radio" name="q2" value="C">
+            C. 4
+          </label>
+          <label>
+            <input type="radio" name="q2" value="D">
+            D. 6
+          </label>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <div class="question">5. What is the longest River in the world?</div>
+        <div class="answers">
+          <label>
+            <input type="radio" name="q2" value="A">
+            A. Nile River
+          </label>
+          <label>
+            <input type="radio" name="q2" value="B">
+            B. Amazon
+          </label>
+          <label>
+            <input type="radio" name="q2" value="C">
+            C. Mississippi
+          </label>
+          <label>
+            <input type="radio" name="q2" value="D">
+            D. Yangtze River
+          </label>
+        </div>
+      </div>
+
+    <button class="submit-btn">Submit</button>
+  </div>
+
+</body>
+</html>

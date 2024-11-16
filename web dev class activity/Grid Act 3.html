@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Dashboard Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+         body {
+             margin: 0;
+             font-family: Arial, sans-serif;
+             background-color: #f4f4f4; /* Light background color */
+             }
+
+        .dashboard-container {
+             display: grid;
+             grid-template-rows: 60px 1fr; /* Header height fixed, rest is flexible */
+             grid-template-columns: 200px 1fr; /* Sidebar width fixed, main content flexible */
+             height: 100vh; /* Full height */
+             }
+
+        .header {
+            grid-column: 1 / -1; /* Header spans both columns */
+            background-color: #af604c; /* Header color */
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 20px; /* Horizontal padding */
+                }
+
+        .sidebar {
+            background-color: #333; /* Sidebar color */
+            color: white;
+            padding: 20px;
+            }
+
+        .sidebar h2 {
+            margin-top: 0; /* Remove top margin */
+            }
+
+        .sidebar ul {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0; /* Remove padding */
+            }
+
+        .sidebar ul li {
+            margin: 10px 0; /* Space between items */
+            }
+
+        .sidebar ul li:hover {
+            cursor: pointer;
+            color: #ea1818;
+            }
+
+        .main-content {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Flexible columns for widgets */
+            gap: 20px; /* Space between widgets */
+            }
+
+        .widget {
+            background-color: #5d5d5da9; /* Widget background color */
+            border: 1px solid #ccc; /* Widget border */
+            border-radius: 8px; /* Rounded corners */
+            color: #ffffff;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            }
+
+        .widget h3 {
+            margin-top: 0; /* Remove top margin */
+            }
+
+        .widget:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                background-color: #ffffff;
+                color: black;
+            }
+
+</style>
+<body>
+    <div class="dashboard-container">
+        <header class="header">
+            <h1>Dashboard</h1>
+        </header>
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li>Home</li>
+                <li>Profile</li>
+                <li>Settings</li>
+                <li>Logout</li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="widget statistics">
+                <h3>Statistics</h3>
+                <p>Total Users: 2,499</p>
+                <p>Active Users: 920</p>
+                <p>Revenue: $300,890</p>
+            </div>
+            <div class="widget recent-activity">
+                <h3>Recent Activity</h3>
+                <ul>
+                    <li>User 667 logged in</li>
+                    <br>
+                    <li>User 234 updated their profile</li>
+                    <br>
+                    <li>User 009 made a purchase</li>
+                    <br>
+                    <li>User 2365 Changed his location</li>
+                    <br>
+                    <li>User 891 updated profile picture</li>
+                    <br>
+                    <li>User 21 made a new account</li>
+                </ul>
+            </div>
+            <div class="widget notifications">
+                <h3>Notifications</h3>
+                <ul>
+                    <li>New message from User D</li>
+                    <br>
+                    <li>Dear Players there is a System maintenance scheduled for friday at 11:00 PM to 1:00 AM</li>
+                    <br>
+                    <li>New version 8.9910.8 available for download</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

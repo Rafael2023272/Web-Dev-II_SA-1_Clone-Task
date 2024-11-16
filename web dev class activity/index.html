@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <title>Weston's Chocolate Box</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f3f3f3;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #2f1e1e;
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center; /* Align items vertically */
+        }
+
+        .logo {
+            margin-right: 30px; /* Space between logo and title */
+            border-radius: 10px;
+            width: 60px;
+        }
+        .background{
+           
+            width: 0%;
+            height: 0%;
+            
+        }
+
+        header nav {
+            flex-grow: 1; /* Allow nav to take remaining space */
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end; /* Align nav items to the right */
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #703c00;
+        }
+
+        .hero-image {
+            background-image: url('background.jpg'); /* Replace with your image path */
+            background-size: cover; /* Make the image cover the entire section */
+            background-position: center; /* Center the image */
+            height: 80vh; /* Adjust height as needed */
+            display: flex; /* Use flexbox for centering */
+            align-items: left; /* Vertically center the content */
+            justify-content: left; /* Horizontally center the content */
+            text-align: left; /* Center text */
+            color: white; /* Change text color for visibility */
+            position: relative; /* Positioning for overlay */
+            padding: 40px; /* Add padding around the text */
+        }
+
+        .text-overlay {
+            max-width: 600px; /* Limit the width of the text overlay */
+            margin: 5% ; /* Center the overlay */
+            font-family: "Dancing Script", cursive;/* Change to your desired font */
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-size: 1.5em; /* Set base font size */
+            line-height: 1.5; /* Increase line height for readability */
+        }
+
+        .shop-now {
+            background-color: #2f1e1e; /* Button color */
+            color: white; /* Button text color */
+            padding: 10px 30px; /* Button padding */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 1em; /* Button text size */
+            transition: background-color 0.3s ease; /* Transition effect */
+            margin-top: 20px; /* Add space above the button */
+        }
+
+        .shop-now:hover {
+            background-color: #332615bd; /* Darker color on hover */
+        }
+
+
+        .cta-button {
+            background-color: #655035ca;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #44331fdc;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .about-section h2 {
+            font-size: 2.5em;
+            margin: 20px;
+            font-family: cursive;
+            
+
+        }
+
+        .about-section p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .products-section {
+            padding: 60px 0; /* Space above and below the section */
+            background-color: #2f1e1e; /* Optional: background color */
+        }
+
+        .container {
+            text-align: center; /* Center content in the container */
+        }
+
+        .section-title {
+            font-size: 2.5em; /* Font size for the heading */
+            margin-bottom: 40px; /* Space below the heading */
+            font-family: "Dancing Script", cursive; /* Font style */
+            color: #ffffff; /* Change color if needed */
+        }
+
+        .product-grid {
+            display: flex; 
+            justify-content: center; /* Center the product grid */
+            flex-wrap: wrap; /* Allow products to wrap in smaller screens */
+            margin-top: 20px; /* Space between the title and products */
+        }
+
+        .product {
+            background: rgb(255, 255, 255); 
+            padding: 20px; 
+            margin: 15px; /* Space between products */
+            width: 250px; /* Adjust product width */
+            font-family: monospace; 
+            text-align: center; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            border-radius: 3px; 
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgb(73, 58, 19);
+        }
+
+        .product img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .chocolate-box {
+            padding: 20px;
+            margin: 20px;
+            background: #5c40197e;
+            color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            width: 40%; /* Set width for better alignment */
+        }
+
+        .chocolate-box h3 {
+            margin-bottom: 15px;
+        }
+
+        .chocolate-item {
+            margin-bottom: 5px;
+        }
+
+        .total {
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+        .product {
+             width: 90%;
+             margin: 15px auto;
+            }
+
+        .about-section p {
+            width: 90%;
+            }
+        }
+
+        .contact {
+            background-color: #5c40197e;
+            padding: 20px;
+            color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 10px;
+            text-align: center;
+            width: 40%;
+        }
+
+        .contact h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .contact p:hover {
+            text-decoration: underline;
+            transform: scale(1.09);
+        }
+
+        .basket-contact-container {
+            display: flex;
+            justify-content: space-between; /* Space between both sections */
+            align-items: flex-start; /* Align items at the start */
+            margin: 20px auto; /* Center the container */
+            width: 90%; /* Adjust the width of the container */
+        }
+
+        .basket-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .delete-btn {
+            background-color: transparent;
+            border: none;
+            color: rgb(56, 37, 23);
+            font-size: 16px;
+            cursor: pointer;
+            padding: 0 5px;
+            transition: color 0.3s ease;
+        }
+
+        .delete-btn:focus {
+  outline: none;
+        }
+
+
+        footer {
+            background-color: #2f1e1e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="container">
+            <a href="index.html">
+            <img src="logo.jpg" alt="Logo" class="logo" width="100">
+            </a> <!-- Adjust width as necessary -->
+            <h1 style="margin-right: 20px;">Weston's Chocolate Box</h1> <!-- Space before title -->
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#Log in">Log / Sign in</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero-image">
+        <div class="text-overlay">
+            <h1>WESTON'S CHOCOLATE FACTORY</h1>
+            <br>
+            <p>Where every bite tells a story of rich, velvety indulgence. Whether it's our handcrafted pralines or our decadent truffles, 
+                we invite you to experience the magic of pure chocolate joy.</p>
+            <br>
+            <p><b>Indulge in Pure Bliss, One Bite at a Time.</b></p>
+            <br>
+            <button class="shop-now">SHOP NOW</button>
+        </div>
+    </section>
+    
+    
+        
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>What is Weston's Chocolate Box?</h2>
+            <p>Weston's Chocolate Box is one of the most popular chocolate brands, offering a range of baked products, beverages, and more. 
+                Established in 1908, we’ve become known for premium chocolates and innovative flavors.</p>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">Check Out Our Best-Selling Products</h2> <!-- Title is now independent -->
+        </div>
+        <div class="product-grid"> <!-- Moved product-grid outside of the container -->
+            <div class="product" data-price="200">
+                <img src="c1.jpg" alt="Classic Chocolate Box" class="product-image">
+                <h3>Classic Chocolate Box</h3>
+                <p>$200</p>
+                <a href="#" class="cta-button">Add to Box</a>
+            </div>
+            <div class="product" data-price="250">
+                <img src="c2.jpg" alt="Deluxe Chocolate Box" class="product-image">
+                <h3>Deluxe Rich Chocolate Box</h3>
+                <p>$250</p>
+                <a href="#" class="cta-button">Add to Box</a>
+            </div>
+            <div class="product" data-price="120">
+                <img src="c3.jpg" alt="Luxury Truffle Box" class="product-image">
+                <h3>Premium Chocolate Bar Box</h3>
+                <p>$120</p>
+                <a href="#" class="cta-button">Add to Box</a>
+            </div>
+            <div class="product" data-price="90">
+                <img src="c4.jpg" alt="Fruit & Nut Selection" class="product-image">
+                <h3>Classic Chocolate Cookies</h3>
+                <p>$90</p>
+                <a href="#" class="cta-button">Add to Box</a>
+            </div>
+            <div class="product" data-price="85">
+                <img src="c5.jpg" alt="Hazelnut Delight" class="product-image">
+                <h3>Classic Brownies Delight</h3>
+                <p>$85</p>
+                <a href="#" class="cta-button">Add to Box</a>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    <!-- Basket and Contact Section -->
+    <section class="basket-contact-container">
+        <!-- Chocolate Box Section -->
+        <div class="chocolate-box" id="chocolate-box">
+            <h3>Your Chocolate Box</h3>
+            <div id="basket-items"></div>
+            <div class="total">Total: $<span id="total-amount">0</span></div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact">
+            <h2>Have Some Questions? Contact us </h2>
+            <p><em>Email:</em> WenstonChocloate@gmail.com</p>
+            <p><em>Telephone:</em> +0558882347</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Weston's Chocolate Box. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Get all the CTA buttons
+          const ctaButtons = document.querySelectorAll(".cta-button");
+      
+          // Get the basket items container and total amount element
+          const basketItems = document.getElementById("basket-items");
+          const totalAmount = document.getElementById("total-amount");
+      
+          // Initialize total price
+          let totalPrice = 0;
+      
+          // Object to store products and their quantities
+          let basket = {};
+      
+          // Function to update the basket UI
+          function updateBasketUI() {
+            basketItems.innerHTML = ""; // Clear the basket
+      
+            for (let productName in basket) {
+              const productData = basket[productName];
+              const itemElement = document.createElement("div");
+              itemElement.classList.add("basket-item");
+              itemElement.innerHTML = `
+                ${productData.quantity}x ${productName} - $${productData.price.toFixed(2)} each 
+                <button class="delete-btn" data-name="${productName}">Delete</button>
+              `;
+      
+              // Append the new item to the basket
+              basketItems.appendChild(itemElement);
+            }
+      
+            // Update total price in the UI
+            totalAmount.textContent = totalPrice.toFixed(2);
+      
+            // Attach event listeners to delete buttons
+            const deleteButtons = document.querySelectorAll(".delete-btn");
+            deleteButtons.forEach(button => {
+              button.addEventListener("click", function() {
+                const productName = button.getAttribute("data-name");
+                removeProduct(productName);
+              });
+            });
+          }
+      
+          // Function to add product to basket
+          ctaButtons.forEach(button => {
+            button.addEventListener("click", function(event) {
+              event.preventDefault();
+      
+              // Get the product information
+              const product = button.closest(".product");
+              const productName = product.querySelector("h3").textContent;
+              const productPrice = parseFloat(product.getAttribute("data-price"));
+      
+              // Check if the product is already in the basket
+              if (basket[productName]) {
+                basket[productName].quantity += 1; // Increase the quantity
+              } else {
+                basket[productName] = { price: productPrice, quantity: 1 }; // Add new product
+              }
+      
+              // Update total price
+              totalPrice += productPrice;
+      
+              // Update the UI
+              updateBasketUI();
+            });
+          });
+      
+          // Function to remove a product from the basket
+          function removeProduct(productName) {
+            if (basket[productName]) {
+              // Deduct the total price by the product's price multiplied by its quantity
+              totalPrice -= basket[productName].price * basket[productName].quantity;
+      
+              // Remove the product from the basket object
+              delete basket[productName];
+      
+              // Update the UI
+              updateBasketUI();
+            }
+          }
+        });
+      </script>
+      
+</body>
+</html>
